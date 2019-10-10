@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8/>
+        <title>Arithmetic Operation</title>
+        <style type="text/css">
+        body{margin: 30px;
+        background-color: "gray";}
+        </style>
+    </head>
+    <body>
+        <form>
+            First Number:<input type="text",id="firstnumber"/><br>
+            Second Number:<input type="text",id="secondnumber"/><br>
+            <input type="button" onclick="addBy()" value="addition"/>
+            <input type="button" onclick="subBy()" value="substraction"/>
+            <input type="button" onclick="mulBy()" value="multiplication"/>
+            <input type="button" onclick="divBy()" value="division"/>
+           
+        </form>
+        <p>Result:<br>
+            <span id="result"></span>
+         </p>
+         <script>
+             function addBy()
+             {
+                 num1=document.getElementById("firstnumber").value;
+                 num2=document.getElementById("secondtnumber").value;
+                 document.getElementById("result").innerHTML=num1+num2;
+             }
+             function subBy()
+             {
+                 num1=document.getElementById("firstnumber").value;
+                 num2=document.getElementById("secondtnumber").value;
+                 document.getElementById("result").innerHTML=num1-num2;
+             }
+             function mulBy()
+             {
+                 num1=document.getElementById("firstnumber").value;
+                 num2=document.getElementById("secondtnumber").value;
+                 document.getElementById("result").innerHTML=num1*num2;
+             }
+             function divBy()
+             {
+                 num1=document.getElementById("firstnumber").value;
+                 num2=document.getElementById("secondtnumber").value;
+                 document.getElementById("result").innerHTML=num1/num2;
+             }
+         </script>
+    </body>
+</html>
