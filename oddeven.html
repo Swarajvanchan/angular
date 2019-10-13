@@ -1,0 +1,22 @@
+<html>
+    <head>Odd or Even</head>
+    <script>
+       function findOddEven(){
+  
+                var num = document.getElementById('num').value;
+                if ( num % 2 == 0) {
+                    document.getElementById('result').innerHTML = num + ' is a Even number';
+                }else{
+                    document.getElementById('result').innerHTML = num + ' is a Odd number';
+                }
+            }        
+    </script>
+    <body>
+        <h2>Odd or Even</h2>
+                <form method="post">
+                        Enter a number:  <input type="number" id="num" name="num"/><input type="button" value="Find Odd or Even" onclick="findOddEven()" name="find" />
+                        <div style="margin-top: 10px;" id="result"></div>
+                    </form>
+        </form>    
+    </body>
+</html>
