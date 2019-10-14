@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Fibonacci series</title>
+        <script>
+        var val1=0;
+        var val2=1;
+        var val3;
+        var num=prompt("enter the limit",0);
+        document.write(val1+"<br/>");
+        document.write(val2+"<br/>");
+        for(var i=2;i<num;i++){
+            val3=val1+val2;
+            document.write(val3+"<br/>");
+            val1=val2;
+            val2=val3;
+          }
+        </script>
+    </head>
+
+</html>
