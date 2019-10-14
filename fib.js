@@ -11,3 +11,5 @@ var fibonacci_series = function (n)
     return s;
   }
 };
+
+ console.log(fibonacci_series(8));
