@@ -1,22 +1,56 @@
-    
-            function matrixDot (A, B) {
-                var result = new Array(A.length).fill(0).map(row => new Array(B[0].length).fill(0));
-            
-                return result.map((row, i) => {
-                    return row.map((val, j) => {
-                        return A[i].reduce((sum, elm, k) => sum + (elm*B[k][j]) ,0)
-                    })
-                })
+function addMatrices(m1, m2) {
+    var result = [];
+    for (var i = 0; i < m1.length; i++) {
+        result[i] = [];
+        for (var j = 0; j < m2[0].length; j++) {
+            var sum = 0;
+            for (var k = 0; k < m1[0].length; k++) {
+                sum = m1[i][k] + m2[k][j];
             }
-            
-            var print = m => m.forEach(r => document.write(`&nbsp;&nbsp;${r.join(' ')}<br/>`)) 
-            
-            var a = [[8, 3], [2, 4], [3, 6]]
-            var b = [[1, 2, 3], [4, 6, 8]]
-            
-            document.write('matrix a:<br />');
-            print(a);
-            document.write('matrix b:<br />');
-            print(b);
-            document.write('a * b =<br />');
-            print(matrixDot(a,b)); 
+            result[i][j] = sum;
+        }
+    }
+    return result;
+}
+
+function subMatrices(m1, m2) {
+    var result = [];
+    for (var i = 0; i < m1.length; i++) {
+        result[i] = [];
+        for (var j = 0; j < m2[0].length; j++) {
+            var sum = 0;
+            for (var k = 0; k < m1[0].length; k++) {
+                sum = m1[i][k] - m2[k][j];
+            }
+            result[i][j] = sum;
+        }
+    }
+    return result;
+}
+
+function multiplyMatrices(m1, m2) {
+    var result = [];
+    for (var i = 0; i < m1.length; i++) {
+        result[i] = [];
+        for (var j = 0; j < m2[0].length; j++) {
+            var sum = 0;
+            for (var k = 0; k < m1[0].length; k++) {
+                sum = m1[i][k] * m2[k][j];
+            }
+            result[i][j] = sum;
+        }
+    }
+    return result;
+}
+
+var m1 = [[1,2],[3,4]]
+var m2 = [[5,6],[7,8]]
+
+console.log("addition of matrix is");
+console.log(addMatrices(m1, m2)) ;
+
+console.log("substraction of matrix is");
+console.log(subMatrices(m1, m2)) ;
+
+console.log("multipication of matrix is");
+console.log(multiplyMatrices(m1, m2)) ; 
