@@ -25,7 +25,7 @@ let names=[
     }
 
 ]
-let table=document.getElementById('labOs')
+let table=document.getElementById('tabOs')
 console.log(table)
 let totalCost=0
 
